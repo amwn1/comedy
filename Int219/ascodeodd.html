@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        overflow: hidden;
+        gap: 50px;
+        background: linear-gradient(45deg, #fffde7, #ffb74d);
+      }
+
+      img {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+      }
+
+      #mainArea {
+        height: 300px;
+        width: 300px;
+        background-color: #999;
+        border-radius: 15px;
+        box-shadow: 5px 5px 16px #0404044a;
+        overflow: hidden;
+      }
+
+      #joke {
+        padding: 25px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 25px;
+        align-items: center;
+        box-sizing: border-box;
+        color: #b2ebf2;
+        background: #039be5;
+      }
+
+      #timer {
+        padding: 25px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 50px;
+        align-items: center;
+        box-sizing: border-box;
+        color: #e6ee9c;
+        background: #558b2f;
+      }
+
+      button {
+        padding: 25px;
+        border: none;
+        background-color: salmon;
+        color: #131313;
+        border-radius: 15px;
+        font-weight: 600;
+        height: 100px;
+        width: 100px;
+        border-radius: 500px;
+        cursor: pointer;
+        box-shadow: 5px 5px 11px 0px #00000040;
+        transition: 0.25s ease-in-out;
+      }
+
+      button:hover {
+        transform: scale(1.2);
+      }
+
+      #btn2 {
+        background: #ffc107;
+      }
+
+      #btn1 {
+        background: grey;
+      }
+
+      #btn3 {
+        background: red;
+      }
+
+      #buttons {
+        display: flex;
+        gap: 50px;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainArea"></div>
+    <div id="buttons">
+      <button id="btn2" onclick="happy()">Happy</button>
+      <button id="btn1" onclick="sad()">Sad</button>
+      <button id="btn3" onclick="angry()">Angry</button>
+    </div>
+  </body>
+  <script>
+    let happyInterval = null;
+    let angryInterval = null;
+    let showArea = document.querySelector("#mainArea");
+
+    let jokes = [
+      "I am not good with puns, maybe because I am not Punjabi",
+      "Why do ghosts use lift? To lift their spirits",
+      "What kind of tea is hard to swallow? Reality!",
+      "Why was 6 afraid of 7? because 7 8 9",
+      "How do you get a squirrel to like you? Act like a nut",
+    ];
+
+    function sad() {
+      if (angryInterval) clearInterval(angryInterval);
+      if (happyInterval) clearInterval(happyInterval);
+      let jokeIndex = Math.random() * (jokes.length - 1);
+      jokeIndex = Math.round(jokeIndex);
+      console.log(jokeIndex);
+      showArea.innerHTML = `<div id="joke">${jokes[jokeIndex]}</div>`;
+    }
+
+    function happy() {
+      if (happyInterval) clearInterval(happyInterval);
+      if (angryInterval) clearInterval(angryInterval);
+      let image = 1;
+
+      showArea.innerHTML = `<img src="dancing1.png"/>`;
+
+      happyInterval = setInterval(() => {
+        image = image == 1 ? 2 : 1;
+        let imageDom = `<img src="${image}.png"/>`;
+        document.querySelector("#mainArea").innerHTML = imageDom;
+      }, 1000);
+    }
+
+    function angry() {
+      let time = 60;
+      if (happyInterval) clearInterval(happyInterval);
+      if (angryInterval) clearInterval(angryInterval);
+      angryInterval = setInterval(() => {
+        if (time >= 0)
+          document.querySelector(
+            "#mainArea"
+          ).innerHTML = `<div id="timer">${time}</div>`;
+        time -= 1;
+      }, 1000);
+    }
+  </script>
+</html>

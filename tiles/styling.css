@@ -1,0 +1,129 @@
+body {
+    background-image: url(fluidmagma.jpg);
+    font-family: monospace;
+    padding: 70px;
+  }
+  
+  h1 {
+    color: rgb(44, 42, 42);
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    font-size: 30px;
+    color: rgb(107, 55, 55);
+  }
+  
+  .established {
+    font-style: italic;
+    text-align: center;
+  }
+  
+  h1, h2,p  {
+    text-align: center;
+  }
+  
+  .pamphalet {
+    width: 100%;
+    background-color: rgb(251, 248, 248);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 30px;
+    max-width: 500px;
+  }
+  
+  img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -15px;
+  }
+  
+  hr {
+    height: 3px;
+    background-color: rgb(129, 115, 115);
+    border-color: rgb(24, 23, 23);
+  }
+  
+  .bottom-line {
+    margin-top: 25px;
+  }
+  
+  h1, h2 {
+    font-family: Impact, serif;
+  }
+
+  
+  
+  .item p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+
+   #topnav{
+    
+    display: inline-block;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: left;
+    font-size: 20px ;
+    margin-top: 5px;
+    color: rgb(15, 9, 1);
+    
+  }
+  
+  #topnavr{
+    display: inline-block;
+    text-align: right;
+    width: 400px;
+    font-style: oblique; 
+    font-weight: bold;
+    font-size: 20px ;
+    margin-top: 5px;
+    color: rgb(15, 9, 1);
+  }
+  
+  .type, .type1 {
+    display: block;
+    text-align: left;
+    width: 75%;
+  }
+  
+  .price {
+    display: inline-block;
+    width: px;
+    text-align: right;
+    width: 25%;
+  }
+  
+  /* FOOTER */
+  
+  footer {
+    font-size: 14px;
+  }
+  
+  .address {
+    margin-bottom: 5px;
+  }
+  
+  a {
+    color: black;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {
+    color: brown;
+  }
+  
+  a:active {
+    color: brown;
+  }

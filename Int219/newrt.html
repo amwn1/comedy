@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+    <style>
+ 
+        #id {
+            display: none;
+        }
+        .button5 {border-radius: 50%;}
+    </style>
+</head> 
+<body>
+
+<h1>AMAN MALIK</h1>
+<h2>CA 1</h2>
+
+<p>CLICK ANY EMOTION BUTTON:</p>
+
+
+<fieldset>
+    <label><input type="button" onclick="happy()" id="id1" class="button button5" name="mood">HAPPY</button></label>
+    <label><input type="button" onclick="sad()" class="button button5" name="mood">SAD</button></label>
+    <label><input type="button" onclick="angry()" class="button button5" name="mood">ANGRY</button></label>
+    </fieldset>
+<p id="sad"></p>
+<img id="bulb" src="dancing1.png">
+<img id="off" src="dancing2.png"/>
+<img id="on" src="dancing1.png"/>
+<script>
+    
+function happy() { intervalId= setInterval(change,1000)}
+        function change()
+        {
+           var image= document.getElementById("bulb");
+           if(image.src.match("dancing2"))
+           image.src="dancing1.ong";
+           else { image.src="dancing2.png";
+        }
+    }
+
+
+function sad() {
+  document.getElementById("sad").innerHTML = "Random JOKE ' I invented a new word cheating'";
+}
+function angry()
+{
+    document.getElementById("angry").innerHTML="The timer will start now";
+    setInterval(myTimer, 1000);
+function myTimer() {
+const date = new Date();
+document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+}
+}
+</script>
+</body>
+</html>

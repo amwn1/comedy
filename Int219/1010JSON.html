@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Modify an object</h1>
+    <p id = demo>ABCDEFGHIJKLMNOPQRESTUVWX</p>
+ <script>
+           let obj={
+            name:'Aman',
+            reg:12007031,
+            course:'Cse'
+           };
+
+           let Jsonobj=JSON.stringify(obj);
+           console.log(Jsonobj)
+
+           let arr=[{
+            name:'Aman',
+            reg:12007031,
+            course:'Cse'
+           },
+           {
+            name:'Aryan',
+            reg:1200785,
+            course:'Cse'
+           }
+        ]
+        // to convert json to js -> PARSE
+        // to convert js to json -> stringify
+        
+        const cars = '["Fortuner","BMW","Creta","XUV"]';
+        const myArr = JSON.parse(cars);
+        console.log(myArr);
+        document.getElementById("demo").innerHTML=myArr[0];
+const pDob=JSON.parse(dob)
+const date=new Date(pDob.db);
+console.log(date)
+</script>   
+</body>
+</html>

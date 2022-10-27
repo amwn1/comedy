@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+    <style>
+ 
+        #id {
+            display: none;
+        }
+    </style>
+</head> 
+<body>
+
+<h1>AMAN MALIK</h1>
+<h2>CA 1</h2>
+
+<p>CLICK ANY EMOTION BUTTON:</p>
+
+
+<button onclick="happy()" id="id1">HAPPY</button>
+<button onclick="sad()">SAD</button>
+
+<p id="sad"></p>
+<img id="id" src="pic_bulbon.gif"/>
+<script>
+    
+function happy() {
+    document.getElementById('id')
+                    .style.display = "block";
+ 
+            document.getElementById('id1')
+                    .style.display = "none";
+}
+
+function sad() {
+  document.getElementById("sad").innerHTML = "Random JOKE ' _ '";
+}
+</script>
+
+</body>
+</html>
