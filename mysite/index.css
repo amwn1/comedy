@@ -1,0 +1,73 @@
+body{
+    margin: 0%;
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+
+}
+
+h1{
+    
+    margin: 50px auto 0 auto;
+    font-family: 'Sacramento', cursive;
+    font-size: 562.5%;
+    color: #66bfbf;
+    height: 2;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem ;
+    color: #66bfbf;
+    font-weight: normal;
+}
+h3{
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.top-container{
+    background-color: #256D85;
+    padding-top: 100px;
+    position: relative;
+}
+.middle-container{
+
+}
+.bottom-container{
+}
+
+
+.top-cloud{
+    position: absolute;
+    right: 400px;
+    top: 30px;
+}
+.bottom-cloud{
+    position: absolute;
+}
+img{
+    border-radius:90px;
+}
+.skill-row{
+width: 50%;
+margin: auto;
+margin-top: 100px;
+margin-bottom: 100px;
+text-align: left;
+line-height: 2;
+}
+.android-image{
+    width: 25%;
+    float: left ;
+    margin-right: 30px ;
+}
+.webdev-image{
+    width: 30%;
+    float: right ;
+    margin-right: 30px ;
+}
+.android-description{
+    /* clear: left; */
+}
+.webdev-description{
+    /* clear:right; */
+}
